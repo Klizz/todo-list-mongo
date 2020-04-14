@@ -1,10 +1,10 @@
 {
   "name": "api_prueba",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,14 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klizz/todo-list-mongo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Klizz/todo-list-mongo/issues"
+  },
+  "homepage": "https://github.com/Klizz/todo-list-mongo#readme",
+  "description": ""
 }
