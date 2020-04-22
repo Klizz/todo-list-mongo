@@ -2,18 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const StoreSchema = new Schema({
-    id: {
-        type: Number
-    },
-    created_date: {
-        type: Date,
-        default: Date.now
-    },
     name: {
         type: String,
         required: "Ingresa el nombre de la tienda"
     },
-    person_name: {
+    email: {
+        type: String,
+        required: "Ingresa tu email"
+    },
+    shop_owner: {
         type: String,
         required: "Por favor ingresa tu nombre"
     },
@@ -21,19 +18,23 @@ const StoreSchema = new Schema({
         type: Number,
         required: "Porfavor ingresa tu telefono"
     },
-    email: {
+    shopify_store_id: {
         type: String,
-        required: "Ingresa tu email"
+        required: "Ingresa el id de la tienda"
     },
-    variants: {
-        type: String
+    myshopify_domain: {
+        type: String,
+        required: "Ingresa el id de la tienda"
     },
     status: {
-        type: [{
-            type: String,
-            enum: ['pending', 'ongoing', 'completed']
-        }],
+        type: String,
+        enum: ['En espera', 'En revision'],
         default: ['ongoing']
-    }
+    },
+    created_date: {
+        type: Date,
+        default: Date.now
+    },
 })
+
 module.exports = mongoose.model('Store', StoreSchema);

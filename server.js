@@ -11,12 +11,14 @@ express.application.prefix = express.Router.prefix = function (
 }; 
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Store = require('./api/models/storeModel');
+const Variant = require('./api/models/variantModelModel');
 const bodyParser = require('body-parser');
 
 const storeRoutes = require('./api/routes/storeRoutes');
+const variantRoutes = require('./api/routes/variantRoutes');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Shopify');
